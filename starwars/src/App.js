@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CharacterList from './components/CharacterList';
+import Button from './components/Button';
 
 
 class App extends Component {
@@ -39,6 +40,10 @@ class App extends Component {
         <CharacterList 
           characters = {this.state.starwarsChars}
         />
+        <div className="button-container">
+          <Button value = "Previous"/>
+          <Button  value = "Next"/>
+        </div>
       </div>
     );
   }
