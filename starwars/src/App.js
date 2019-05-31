@@ -4,23 +4,28 @@ import CharacterList from './components/CharacterList';
 import Button from './components/Button';
 
 
+const Path_Base = "https://swapi.co/api/";
+const Default_Query = "people"
+const Param_Page = "page=";
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      searchTerm: Default_Query
     };
   }
 
   componentDidMount() {
-    this.getCharacters('https://swapi.co/api/people/');
+    //this.getCharacters('https://swapi.co/api/people/');
+    this.getCharacters(this.state.searchTerm)
   }
 
-  getCharacters = URL => {
+  getCharacters = (searchTerm, PAGE = 1) => {
     // feel free to research what this code is doing.
     // At a high level we are calling an API to fetch some starwars data from the open web.
     // We then take that data and resolve it our state.
-    fetch(URL)
+    fetch(`${Path_Base}${searchTerm}/?${Param_Page}${PAGE}`)
       .then(res => {
         return res.json();
       })
