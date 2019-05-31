@@ -48,6 +48,14 @@
   margin: 0 auto;
 }
 
+.button-container button  {
+  cursor: pointer;
+  width: 25%;
+  padding: .8rem 1rem;
+  font-size: 1rem;
+  margin-right: .3rem;
+}
+
 .button-container .prev   {
   margin-right: 20px;
 }

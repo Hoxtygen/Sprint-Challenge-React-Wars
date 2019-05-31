@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Button({value, handleEvent, className}) {
+export default function Button({value, handleClick}) {
     return (
-        <div className = "prev">
-            <button type="submit">{value}</button>
-        </div>
+        <button onClick = {handleClick}  type="submit">{value}</button>
     )
 }
+
+// <button className="navBtn" onClick={() => clickHandler(prev)}>
