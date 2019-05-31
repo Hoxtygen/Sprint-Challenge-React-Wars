@@ -1,8 +1,40 @@
 .App {
   text-align: center;
 }
+
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.character-list   {
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-list h2  {
+  background-color: #fff;
+  padding: .5rem 5rem;
+}
+
+.character   {
+  border: 1px solid #ccc;
+  width: 30%;
+  background-color:#f7f7f7;
+  margin-bottom: 10px;
+}
+
+.character h4   {
+  margin: .5rem;
+  background-color: #ccc;
+}
+
+.character ul   {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
